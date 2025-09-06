@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+    <h1>Our products</h1>
+    <div class="data-container" id="dataContainer"></div>
+
+    <script>
+        // Function to fetch data from the API
+        async function fetchData() {
+            const apiUrl = 'https://fakestoreapi.com/products';
+            const dataContainer = document.getElementById('dataContainer');
+
+            try {
+                // Clear previous data
+                dataContainer.innerHTML = '<p>Loading...</p>';
+
+                // Fetch data from the API
+                const response = await fetch(apiUrl);
+
+                // Check if the response is successful
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+
+                // Parse the JSON data
+                const data = await response.json();
+
+                // Clear the loading message
+                dataContainer.innerHTML = '';
+
+                // Display the data on the webpage
+                data.slice(0, 22).forEach(item => {
+                    const div = document.createElement('div');
+                    div.className = 'data-item';
+                    div.innerHTML = `
+                        <img src="${item.image}" alt="${item.title}">
+                        <h3>${item.title}</h3>
+                        <p>Price: ${item.price}</p>
+                        <p>Description: ${item.description}</p>
+                        <p>Rating: ${item.rating.rate}</p>
+                        <p>Rating Count: ${item.rating.count}</p>
+                    `;
+                    dataContainer.appendChild(div);
+                });
+            } catch (error) {
+                // Handle errors
+                dataContainer.innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
+            }
+        }
+        fetchData();
+    </script>
+</body>
+</html>
