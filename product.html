@@ -3,11 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product</title>
-    <link rel="stylesheet" href="product.css">
+    <title>Scape Product</title>
+    <link rel="stylesheet" href="index.css">
 </head>
-<body>
-    <h1>Our products</h1>
+<body class="probody">
+    <header class="header">
+        <img src="scape.jpg" alt="logo" height="80vh">
+        <h1>Scape Items</h1>
+        <nav class="navbar">
+            <a href="index.html"><img src="iconhome.png" height="40px" alt="home" title="HOME"></a>
+        </nav>
+    </header>
     <div class="data-container" id="dataContainer"></div>
 
     <script>
@@ -18,7 +24,7 @@
 
             try {
                 // Clear previous data
-                dataContainer.innerHTML = '<p>Loading...</p>';
+                dataContainer.innerHTML = '<p>Scape is running...</p>';
 
                 // Fetch data from the API
                 const response = await fetch(apiUrl);

@@ -3,28 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scape-Fund</title>
+    <title>Scape</title>
     <link rel="stylesheet" href="index.css">
 </head>
-<body>
+<body style="font-family: 'Montserrat', sans-serif;">
     <!-- the header and nav bar -->
-    <section>
+    <section id="index">
         <header class="header">
-            <img src="cart.png" alt="logo" height="100vh">
-            <h1>SCAPE FUND</h1>
+            <a href="index.html"><img src="scape.jpg" alt="logo" height="80vh"></a>
             <nav class="navbar">
                 <a href="#index">Home</a>
-                <a href="#product">Product</a>
+                <a href="product.html">Product</a>
                 <a href="#about">About</a>
                 <a href="#contact">Contact</a>
             </nav>
         </header>
         <!-- this is the hero section -->
         <div class="hero">
-            <h1>Welcome to Scape Fund</h1>
-            <p>Your one-stop solution for all trading needs.</p>
-            <a href="#services" class="chkout">Get Started</a>
+            <h1>Welcome to SCAPE</h1>
+            <p><i>Your one-stop solution for all trading needs.</i></p>
+            <a href="login.html" class="chkout">Get Started</a>
         </div>
+        <!-- the contact section -->
+        <section id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <p>
+                Have questions or need assistance? 
+            </p>
+            <div class="contact-container">
+                <div>
+                    <h1>
+                        Trading is fun with SCAPE, advertise and get potential clients. Join us Today!
+                    </h1>
+                    <p>
+                        We are here to help you with any inquiries or support you may need. <br>
+                        Fill out the form below and we will get back to you as soon as possible.
+                    </p>
+                </div>
+                <!-- this section is for the contact form -->
+                <form action="#" method="post" class="contact-form">
+                    <input type="text" id="name" name="name" placeholder="Full Name*" required>
+                    <input type="email" id="email" name="email" placeholder="Email Address*" required>
+                    <textarea id="message" name="message" placeholder="You have a message for us?" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+        <!--the footer page -->
+        <footer class="footer">
+            <div class="ftcon">
+                <div class="ft-col">
+                    <h1>S C A P E</h1>
+                    <ul class="quickie">
+                        <li><a href=""><img src="Icon -GitHub.png" alt="github" height="20px"></a></li>
+                        <li><a href=""><img src="Frame-twittter.png" alt="twitter" height="20px"></a></li>
+                        <li><a href=""><img src="Icon - Linkedin.png" alt="linkedin" height="20px"></a></li>
+                    </ul>
+                </div>
+                <div class="ft-col">
+                    <h1>Quick Links</h1>
+                    <ul class="quick">
+                        <li><a href="#index">Home</a></li>
+                        <li><a href="#about">About Scape</a></li>
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="ft-col">
+                    <h1>Newsletter</h1> <br>
+                    <p>Subscribe for product and advert updates.</p>
+                    <form class="news-form">
+                        <input type="email" placeholder="Your Email" required> <br>
+                        <button type="submit" class="ftbtn">SUBSCRIBE</button>
+                    </form>
+                </div>
+            </div>
+            <hr>
+            <!-- social media links -->
+            <div class="footlinks">
+                <h1>&copy; 2026 SCAPE Inc, All rights reserved.</h1> 
+            </div>
+        </footer>
     </section>
 </body>
 </html>
