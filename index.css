@@ -280,7 +280,7 @@
     border-bottom-right-radius: 5px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    inline-size: 300px;
+    inline-size: 210px;
     line-height: 20px;
     color: white;
     padding: 7px;
@@ -309,6 +309,11 @@
 .quick a:hover {
     padding: 10px;
     color: white;
+}
+.quickie a:hover {
+    transform: scale(1.1);
+    background-color: rgb(146, 63, 63);
+    transition: transform 0.3s;
 }
 .footlinks {
     display: flex;
@@ -352,4 +357,46 @@ hr {
     flex-wrap: wrap;
     list-style: none;
     gap: 20px;
+}
+.proserv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 40px;
+    background-color: #cac1c1;
+    cursor: default;
+}
+.servdiv {
+    display: grid; 
+    gap: 30px; 
+    margin: 10px 80px; 
+    text-align: center;
+}
+.proserv h1 {
+    font-size: 2.5rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 
+    'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.proserv p {
+    font-size: 1.3rem;
+    font-style: italic;
+}
+.more a{
+    text-decoration: none;
+    color: black;
+    background-color: #e3e3e3;
+    padding: 10px;
+    border: none;
+    border-radius: 7px;
+    box-shadow: 0 0 10px gray; 
+}
+.more a:hover {
+    padding: 17px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 15px gray;
+    background-color: gray;
+    color: white;
 }
