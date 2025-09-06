@@ -13,9 +13,9 @@
             <a href="index.html"><img src="scape.jpg" alt="logo" height="80vh"></a>
             <nav class="navbar">
                 <a href="#index">Home</a>
-                <a href="product.html">Product</a>
+                <a href="#product">Product</a>
                 <a href="#about">About</a>
-                <a href="#contact">Contact</a>
+                <a href="#contacts">Contact</a>
             </nav>
         </header>
         <!-- this is the hero section -->
@@ -24,8 +24,22 @@
             <p><i>Your one-stop solution for all trading needs.</i></p>
             <a href="login.html" class="chkout">Get Started</a>
         </div>
+        <!-- services and product -->
+        <section class="proserv">
+            <h1>Product and Services</h1>
+            <p>
+                Running out of choices?
+            </p>
+            <h2>
+                Scape can manually pick a perfect suit for you
+            </h2>
+            <div id="product" class="servdiv">
+                <div class="data-container" id="dataContainer"></div>
+                <div class="more"><a href="product.html">Jump to Product</a></div>
+            </div>
+        </section>
         <!-- the contact section -->
-        <section id="contact" class="contact">
+        <section id="contacts" class="contact">
             <h2>Contact Us</h2>
             <p>
                 Have questions or need assistance? 
@@ -33,7 +47,7 @@
             <div class="contact-container">
                 <div>
                     <h1>
-                        Trading is fun with SCAPE, advertise and get potential clients. Join us Today!
+                        Trading is fun with SCAPE. <br>advertise and get potential clients. Join us Today!
                     </h1>
                     <p>
                         We are here to help you with any inquiries or support you may need. <br>
@@ -55,9 +69,9 @@
                 <div class="ft-col">
                     <h1>S C A P E</h1>
                     <ul class="quickie">
-                        <li><a href=""><img src="Icon -GitHub.png" alt="github" height="20px"></a></li>
-                        <li><a href=""><img src="Frame-twittter.png" alt="twitter" height="20px"></a></li>
-                        <li><a href=""><img src="Icon - Linkedin.png" alt="linkedin" height="20px"></a></li>
+                        <li><a href="https://github.com/PhateSylvester"><img src="Icon -GitHub.png" alt="github" height="20px"></a></li>
+                        <li><a href="https://x.com/SylvesterPhate"><img src="Frame-twittter.png" alt="twitter" height="20px"></a></li>
+                        <li><a href="https://www.linkedin.com/in/phatesylvester"><img src="Icon - Linkedin.png" alt="linkedin" height="20px"></a></li>
                     </ul>
                 </div>
                 <div class="ft-col">
@@ -71,7 +85,7 @@
                 </div>
                 <div class="ft-col">
                     <h1>Newsletter</h1> <br>
-                    <p>Subscribe for product and advert updates.</p>
+                    <p>Subscribe for product updates.</p>
                     <form class="news-form">
                         <input type="email" placeholder="Your Email" required> <br>
                         <button type="submit" class="ftbtn">SUBSCRIBE</button>
@@ -85,5 +99,46 @@
             </div>
         </footer>
     </section>
+        <script>
+        // Function to fetch data from the API
+        async function fetchData() {
+            const apiUrl = 'https://fakestoreapi.com/products';
+            const dataContainer = document.getElementById('dataContainer');
+
+            try {
+                // Clear previous data
+                dataContainer.innerHTML = '<p>Scape is running...</p>';
+
+                // Fetch data from the API
+                const response = await fetch(apiUrl);
+
+                // Check if the response is successful
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+
+                // Parse the JSON data
+                const data = await response.json();
+
+                // Clear the loading message
+                dataContainer.innerHTML = '';
+
+                // Display the data on the webpage
+                data.slice(0, 6).forEach(item => {
+                    const div = document.createElement('div');
+                    div.className = 'data-item';
+                    div.innerHTML = 
+                       `<img src="${item.image}" alt="${item.title}">
+                        <article>${item.title}</article>
+                        <pre>Price: ${item.price}</pre>`
+                        dataContainer.appendChild(div);
+                });
+            } catch (error) {
+                // Handle errors
+                dataContainer.innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
+            }
+        }
+        fetchData();
+    </script>
 </body>
 </html>
