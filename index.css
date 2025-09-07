@@ -889,3 +889,29 @@ hr {
         gap: 7px;
     }
 } 
+@media (max-width: 360px) {
+    .loginforms {
+        font-size: 20px;
+        margin: 20px 0;
+    }
+    .loginforms input {
+        font-size: 15px;
+    }
+    .formbtns button {
+        font-size: 14px;
+        padding: 5px 15px;
+    }
+    .registers {
+        font-size: 16px;
+        gap: 10px;
+    }
+    .logfoots {
+        font-size: 14px;
+        margin-top: 130px;
+    }
+    .footers {
+        padding: 10px;
+        gap: 20px;
+        height: auto;
+    }
+}
