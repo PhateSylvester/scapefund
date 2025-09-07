@@ -787,6 +787,7 @@ hr {
     }
     .headers {
     display: flex;
+    margin: 0 auto;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
@@ -888,6 +889,11 @@ hr {
         flex-direction: column;
         gap: 7px;
     }
+    .footslinks {
+        text-align: center;
+        font-size: 0.7rem;
+        margin-top: 70px;   
+    }
 } 
 @media (max-width: 360px) {
     .loginforms {
@@ -907,7 +913,8 @@ hr {
     }
     .logfoots {
         font-size: 14px;
-        margin-top: 130px;
+        margin-top: 150px;
+        text-align: center;
     }
     .footers {
         padding: 10px;
