@@ -787,9 +787,10 @@ hr {
     }
     .headers {
     display: flex;
+    margin: 0 auto;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
+    padding: 10px 20px;
     background-color: #e3e3e3;
     position: sticky;
     top: 0;
@@ -869,7 +870,7 @@ hr {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 10px;
     cursor: default;
-    margin-top: 100px;
+    margin-top: 120px;
     /* margin: 0 auto; */
     }
     .log-quicks {
@@ -888,4 +889,58 @@ hr {
         flex-direction: column;
         gap: 7px;
     }
+    .footslinks {
+        text-align: center;
+        font-size: 0.7rem;
+        margin-top: 70px;   
+    }
 } 
+@media (max-width: 360px) {
+    .loginforms {
+        font-size: 20px;
+        margin: 20px 0;
+    }
+    .loginforms input {
+        font-size: 15px;
+    }
+    .formbtns button {
+        font-size: 14px;
+        padding: 5px 15px;
+    }
+    .registers {
+        font-size: 16px;
+        gap: 10px;
+    }
+    .logfoots {
+        font-size: 14px;
+        margin-top: 150px;
+        text-align: center;
+    }
+    .footers {
+        padding: 10px;
+        gap: 20px;
+        height: auto;
+    }
+}
+@media (max-width: 320px) {
+    .contacts {
+        height: auto;
+    }
+    .loginforms {
+        height: 40vh;
+        gap: 10px;
+        padding: 20px;
+    }
+    .contact-forms input, textarea{
+        width: 100%;
+        gap: 10px;
+        height: auto;
+    }
+    .contact-containers {
+        height: 60vh;
+    }
+    .contact-containers input::placeholder, textarea::placeholder {
+        font-size: 10px;
+        width: 100%;
+    }
+}
