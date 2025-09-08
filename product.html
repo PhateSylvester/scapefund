@@ -7,13 +7,12 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body class="probody">
-    <header class="header">
-        <img src="scape.jpg" alt="logo" height="80vh">
-        <h1>Scape Items</h1>
-        <nav class="navbar">
-            <a href="index.html"><img src="iconhome.png" height="40px" alt="home" title="HOME"></a>
-        </nav>
-    </header>
+    <header class="proheader">
+            <img src="scape.jpg" alt="logo" height="40vh">
+            <nav class="navbars">
+                <a href="index.html"><img src="iconhome.png" height="30px" alt="home" title="HOME"></a>
+            </nav>
+        </header>
     <div class="data-container" id="dataContainer"></div>
 
     <script>
@@ -47,10 +46,8 @@
                     div.innerHTML = `
                         <img src="${item.image}" alt="${item.title}">
                         <h3>${item.title}</h3>
-                        <p>Price: ${item.price}</p>
-                        <p>Description: ${item.description}</p>
-                        <p>Rating: ${item.rating.rate}</p>
-                        <p>Rating Count: ${item.rating.count}</p>
+                        <p>Price: &#8358;${item.price}</p>
+                        <p><b><i>Rating: ${item.rating.rate}<b><i></p>
                     `;
                     dataContainer.appendChild(div);
                 });
